@@ -1,15 +1,17 @@
 import java.util.*;
 
 public class Main {
+    private  static int min = 2;
+    private  static int max = 9;
 
     public static void main(String[] args) {
-        int min = 2;
-        int max = 9;
+
+        // почему не выводит результат в мейн такой код? Что не так?
 
         Set<Calcul> calculs = new HashSet<>();
         while (calculs.size() < 15) ;
-        int first = (int) (Math.random() * (max + 1));
-        int second = (int) (Math.random() * (max + 1));
+        int first = (int) (Math.random() * ((max - min) + 1)) + min;;
+        int second = (int) (Math.random() * ((max - min) + 1)) + min;;
         Calcul calcul = new Calcul(second, first);
         calculs.add(calcul);
         Iterator<Calcul> o = calculs.iterator();
