@@ -8,6 +8,7 @@ public class Main {
 
         // почему не выводит результат в мейн такой код? Что не так?
 
+
         Set<Calcul> calculs = new HashSet<>();
         while (calculs.size() < 15) ;
         int first = (int) (Math.random() * ((max - min) + 1)) + min;;
