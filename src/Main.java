@@ -6,20 +6,39 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // задание с паспортом
+
+
+
+        Set<Passport> pasports = new HashSet<>();
+        Passport pasport1= new Passport("Ivan","Ivanov","",1992, 63138259);
+        Passport pasport2= new Passport("Pavel","Petrov","q",1990,61298258);
+        Passport pasport3= new Passport("Andrey","e","y",1999, 12345678);
+        pasports.add(pasport1);
+        pasports.add(pasport2);
+        pasports.add(pasport3);
+        Iterator value = pasports.iterator();
+        System.out.println("Данные");
+        while (value.hasNext()){
+            System.out.println(value.next());
+        }
+
+
+
         // почему не выводит результат в мейн такой код? Что не так?
-
-
         Set<Calcul> calculs = new HashSet<>();
         while (calculs.size() < 15) ;
         int first = (int) (Math.random() * ((max - min) + 1)) + min;;
         int second = (int) (Math.random() * ((max - min) + 1)) + min;;
         Calcul calcul = new Calcul(second, first);
         calculs.add(calcul);
-        Iterator<Calcul> o = calculs.iterator();
-        while (o.hasNext()) {
-            System.out.println(o.next());
+        Iterator info = calculs.iterator();
+        System.out.println("Для учителя");
+        while (info.hasNext()){
+            System.out.println(info.next());
 
-            // для учителя
+
+            // для учителя ( второй вариант решения задачи, который работает в отличии от первого)))
 //        int [][] Mas = new int[15][3];
 //        for(int i =0;i<Mas.length;i++){
 //            for(int h=0;h<Mas[i].length;h++){
@@ -42,6 +61,7 @@ public class Main {
 //                    System.out.println(Mas[i][h]);
 //            }
 //            }
+
 
 
         }
