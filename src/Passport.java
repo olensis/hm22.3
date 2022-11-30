@@ -7,10 +7,10 @@ public class Passport {
     private String patronymic;
     private int birthYear;
     private static int count = 0;
-    private int pasportNumber;
+    private  int pasportNumber;
 
-    public int getPasportNumber() {
-        return pasportNumber;
+    public Object getPasportNumber() {
+        return null;
     }
 
     public void setPatronymic(String patronymic) {
@@ -78,11 +78,12 @@ public class Passport {
         this.surname = surname;
         this.patronymic = patronymic;
         this.birthYear = birthYear;
-        if (birthYear == 0)
+        if (birthYear == 0){
             System.out.println("Неверное значение");
+        }
         this.pasportNumber = pasportNumber;
-        if (pasportNumber == 0)
-            System.out.println("Неверное значение");
+        if (pasportNumber == 0){
+            System.out.println("Неверное значение");}
         count = count++;
 
     }
