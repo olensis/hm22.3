@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
     private  static int min = 2;
@@ -9,36 +10,40 @@ public class Main {
         // задание с паспортом
 
 
-
         Set<Passport> pasports = new HashSet<>();
-        Passport pasport1= new Passport("Ivan","Ivanov","",1992, 63138259);
-        Passport pasport2= new Passport("Pavel","Petrov","q",1990,61298258);
-        Passport pasport3= new Passport("Andrey","e","y",1999, 12345678);
+        Passport pasport1 = new Passport("Ivan", "Ivanov", "", 1992, 63138259);
+        Passport pasport2 = new Passport("Pavel", "Petrov", "q", 1990, 61298258);
+        Passport pasport3 = new Passport("Andrey", "e", "y", 1999, 12345678);
         pasports.add(pasport1);
         pasports.add(pasport2);
         pasports.add(pasport3);
-        Iterator value = pasports.iterator();
-        System.out.println("Данные");
-        while (value.hasNext()){
-            System.out.println(value.next());
-        }
+        Stream.of(pasports.toString()).forEach(System.out::println);
 
 
 
-        // почему не выводит результат в мейн такой код? Что не так?
-        Set<Calcul> calculs = new HashSet<>();
-        while (calculs.size() < 15) ;
-        int first = (int) (Math.random() * ((max - min) + 1)) + min;;
-        int second = (int) (Math.random() * ((max - min) + 1)) + min;;
-        Calcul calcul = new Calcul(second, first);
-        calculs.add(calcul);
-        Iterator info = calculs.iterator();
-        System.out.println("Для учителя");
-        while (info.hasNext()){
-            System.out.println(info.next());
+//        Iterator value = pasports.iterator();
+//        System.out.println("Данные");
+//        while (value.hasNext()){
+//            System.out.println(value.next());
+//        }
 
 
-            // для учителя ( второй вариант решения задачи, который работает в отличии от первого)))
+            // почему не выводит результат в мейн такой код? Что не так?
+            Set<Calcul> calculs = new HashSet<>();
+            while (calculs.size() < 15) ;
+            int first = (int) (Math.random() * ((max - min) + 1)) + min;
+            ;
+            int second = (int) (Math.random() * ((max - min) + 1)) + min;
+            ;
+            Calcul calcul = new Calcul(second, first);
+            calculs.add(calcul);
+            Iterator info = calculs.iterator();
+            System.out.println("Для учителя");
+            while (info.hasNext()) {
+                System.out.println(info.next());
+
+
+                // для учителя ( второй вариант решения задачи, который работает в отличии от первого)))
 //        int [][] Mas = new int[15][3];
 //        for(int i =0;i<Mas.length;i++){
 //            for(int h=0;h<Mas[i].length;h++){
@@ -63,10 +68,10 @@ public class Main {
 //            }
 
 
-
+            }
         }
     }
-}
+
 
 
 
